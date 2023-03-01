@@ -35,12 +35,12 @@ class HomePage extends StatefulWidget {
 }
 
 
-class_HomePageState extends State<HomePage>{
-  final_controller=TextEditingController();
+class _HomePageState extends State<HomePage>{
+  final _controller=TextEditingController();
   var titulo="";
   var itemCount=0;
   
-  void_buscarLivros() async{
+  void _buscarLivros() async{
     titulo=_controller.text;
     final url=Uri.https(
     'www.googleapis.com',
@@ -66,9 +66,9 @@ class_HomePageState extends State<HomePage>{
 
 @override
 Widget build(BuildContext context){
-  return Sacaffold(
+  return Scaffold(
   body:Padding(
-  padding:const Edgelnsets.all(16),
+  padding:const EdgeInsets.all(16),
   child: ListView(
   children: [
     TextField(
